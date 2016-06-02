@@ -327,7 +327,9 @@ public class MarkerView extends Marker {
      */
     @Override
     public void setIcon(@Nullable Icon icon) {
-        markerViewIcon = IconFactory.recreate("icon", icon.getBitmap());
+        if (icon != null) {
+            markerViewIcon = IconFactory.recreate("icon", icon.getBitmap());
+        }
         Bitmap bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
         Icon transparentIcon = IconFactory.recreate("markerViewSettings", bitmap);
         if (markerViewManager != null) {

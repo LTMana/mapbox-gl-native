@@ -85,8 +85,7 @@ public class MarkerViewActivity extends AppCompatActivity {
 
                 // add child classes of ViewMarker
                 CountryMarkerViewOptions options = new CountryMarkerViewOptions();
-                options.icon(IconFactory.getInstance(mMapView.getContext())
-                        .fromResource(R.drawable.icon_burned));
+                options.flagRes(R.drawable.icon_burned);
                 options.abbrevName("Mapbox");
                 options.position(new LatLng(38.899774, -77.023237));
                 options.selectAnimatorResource(R.animator.rotate_360);
